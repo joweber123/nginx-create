@@ -1,7 +1,41 @@
 <h1>How to set up a nginx server using digital ocean</h1>
 
 <a href="https://www.youtube.com/watch?v=YWUQaqsdYUY">good video to help set up</a>
-<a href="https://www.youtube.com/watch?v=BUasdmczmMw&t=953s">with SSH keys</a>
 
-<h2>show hidden folders on mac</h2>
+
+
+<h2>make droplet</h2>
+<p>ubuntu</p>
+<p>get IP Address for droplet</p>
+<p>by default there is no web server</p>
+
+<a href="https://www.youtube.com/watch?v=BUasdmczmMw&t=953s">with SSH keys</a>
+<h2>Get SSH keys</h2>
+<p>open terminal and leave at root folder</p>
+<p>ssh-keygen</p>
+<p>this will ask where to put it, by default it will be /users/<i>whatever user</i>/.ssh/id_rsa</p>
+<p>you can choose to have a passphrase or not, I do not</p>
+<p>ls -a .ssh</p>
+<p>we are looking for id_rsa.pub which is the public ssh key</p>
+<p>sudo vi .ssh/id_id_rsa.pub </p>
+<p>this will go into that public file and we can copy that ssh key</p>
+<p>esc press enter then :q to get out of vim</p>
+<p>now go back to your digital ocean and create new SSH key and paste that key into the modal box and create a new name for that key</p>
+
+
+
+<h2>make nginx web server</h2>
+
+
+
+<h2>setting up fillezilla</h2>
+<a href="https://www.youtube.com/watch?v=sK2yY7BkyGs">setting up filezilla</a>
+<p>upper left-hand corner, site manager, create a new site</p>
+<p>host=ip address(get this from your digital ocean server)</p>
+<p>protocal=SFTP</p>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-filezilla-to-transfer-and-manage-files-securely-on-your-vps">how to configure ssh to your filezilla</a>
+<p>how to show hidden folders on your mac</p>
 <p>Cmd + Shift + . (dot)</p>
+<p>put in the id_rsa key which is your private key</p>
+<p>logon type = interactive</p>
+<p>user =  root</p>
